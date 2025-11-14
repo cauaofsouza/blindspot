@@ -1,0 +1,58 @@
+{
+  "phases": [
+    {
+      "x": 0,
+      "y": 0,
+      "name": "Floresta Densa",
+      "tag": "phase",
+      "description": "Uma densa floresta onde o jogador desperta, sem sinais claros de caminho.",
+      "mobs": []
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "name": "Floresta Densa",
+      "tag": "desert",
+      "description": "Floresta comum. Nada além de árvores densas pode ser visto.",
+      "mobs": []
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "name": "Floresta Densa",
+      "tag": "desert",
+      "description": "A mesma paisagem florestal sem vida aparente.",
+      "mobs": []
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "name": "Floresta Densa",
+      "tag": "desert",
+      "description": "A mata continua fechada e silenciosa.",
+      "mobs": []
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "name": "Floresta Densa",
+      "tag": "desert",
+      "description": "A floresta permanece uniforme e silenciosa.",
+      "mobs": []
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "name": "Clareira",
+      "tag": "trap",
+      "description": "Uma clareira aberta que parece acolhedora, mas esconde vampiros à espreita.",
+      "mobs": [
+        {
+          "name": "Vampiro",
+          "behavior": "emboscada",
+          "rarity": 1.0
+        }
+      ]
+    }
+  ]
+}

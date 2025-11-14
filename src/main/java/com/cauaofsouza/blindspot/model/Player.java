@@ -1,7 +1,6 @@
 package com.cauaofsouza.blindspot.model;
 
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
 public class Player {
@@ -50,7 +49,7 @@ public class Player {
         this.currentPhase = phase;
     }
 
-    public void setScore(int score){
+    public void sumScore(int score){
         this.score += score;
     }
 
