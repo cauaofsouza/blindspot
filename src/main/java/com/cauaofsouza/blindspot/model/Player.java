@@ -2,34 +2,31 @@ package com.cauaofsouza.blindspot.model;
 
 import lombok.Getter;
 
+import java.util.UUID;
+
 @Getter
 public class Player {
+    private String id;
     private final String name;
     private int life;
     private int score;
-    private Phase currentPhase;
     private Coordinate location;
 
-    //para carregar estado
+    //cria player do 0
+    public Player(String name){
+        this.name = name;
+        this.id = UUID.randomUUID().toString();
+        this.location = new Coordinate(0, 0);
+        this.life = 100;
+        this.score = 0;
+    }
+
+    //carregar estado
     public Player(int life, int score,  Phase currentPhase,  Coordinate location,  String name) {
         this.life = life;
         this.score = score;
-        this.currentPhase = currentPhase;
         this.location = location;
         this.name = name;
-    }
-
-    //TODO: colocar em classe de mecânica de jogo; GameService
-    public void walk(String direction){
-        switch (direction.toLowerCase()){
-            case "north" -> location.setY(location.getY() + 1);
-            case "east" -> location.setX(location.getX() + 1);
-            case "south" -> location.setY(location.getY() - 1);
-            case "west" -> location.setX(location.getX() - 1);
-
-            //TODO: exception de direção inválida
-        }
-        //TODO: verificar se muda de fase aqui
     }
 
     /**
