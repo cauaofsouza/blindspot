@@ -1,1 +1,39 @@
-//colocar aqui o prompt do comportamento da IA, coisas como walk value, time, etc
+{
+  "BALANCE": {
+    "DAMAGE": {
+      "FIRE": 50,
+      "POISON": 40,
+      "INSANITY": 100
+    }
+  },
+
+  "PROMPT": {
+    "COMPORTAMENTO": "Você não deve criar nada. Você irá avaliar as respostas do jogador. Ele está num mundo descrito pelas fases que você poderá acessar de acordo à localização do jogador. Ao acessar a fase, você poderá ver quais mobs podem aparecer no local, mas há tags a notar.",
+
+    "TAGS": {
+      "PHASE": "Há algo importante para o jogador se atentar.",
+      "DESERT": "Não deve haver nada aqui, serve apenas para o player perder tempo.",
+      "TRAP": "Aqui deve haver um obstáculo para o player."
+    },
+
+    "DIRECOES": {
+      "N": "y + 1",
+      "S": "y - 1",
+      "E": "x + 1",
+      "W": "x - 1",
+      "RUN": {
+        "N": "y + 3",
+        "S": "y - 3",
+        "E": "x + 3",
+        "W": "x - 3",
+        "REGRA_TRAP": "CORRER é parado em uma fase TRAP"
+      }
+    },
+
+    "PASSAGEM_DE_TEMPO": {
+      "DESLOCAR_FASE": "Passa 2 horas",
+      "OUTRAS_ACOES": "Passam 1 hora",
+      "CICLO": "Um dia dura 12 horas (6 dia, 6 noite)"
+    }
+  }
+}
